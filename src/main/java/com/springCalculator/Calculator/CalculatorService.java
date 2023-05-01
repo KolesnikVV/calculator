@@ -1,26 +1,33 @@
 package com.springCalculator.Calculator;
 //
     public class CalculatorService {
-public String helloCalculator() {
+    public String helloCalculator() {
         return "Добро пожаловать в калькулятор";
         }
 
-public String addition(Integer num1, Integer num2) {
-    if (num1 != null & num2 != null) {
-        return "Error";
-    }
+    public String addition(Integer num1, Integer num2) {
         int addition = num1 + num2;
-        return num1 + "+" + num2 + "=" + addition;
+        return num1 + " + " + num2 + " = " + addition;
+    }
+    public String minus (Integer num1, Integer num2) {
+        int addition = num1 - num2;
+        return num1 + " - " + num2 + " = " + addition;
+    }
+    public String multiply (Integer num1, Integer num2) {
+
+        int addition = num1 * num2;
+        return num1 + " * " + num2 + " = " + addition;
+    }
+    public String divide (Integer num1, Integer num2) {
+        if (num1 == null || num2 == null){
+            return "Error";
+        }
+        if (num2 == 0){
+            return "На 0 делить нельзя!";
+        }
+            int addition = num1 / num2;
+            return num1 + " / " + num2 + " = " + addition;
     }
 
-
-//        String helloCalculator();
-//
-//        String addition (int num1, int num2);
-//
-//        String minus(int num1, int num2);
-//
-//        String multiply(int num1, int num2);
-//
-//        String divide(int num1, int num2);
 }
+
